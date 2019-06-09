@@ -3,11 +3,12 @@
 
 def key_for_min_value(name_hash)
   small = 10000000
+  small_name = nil
   name_hash.collect do |key, value|
     if value < small
       small = value
-      new_arr << small
+      small_name = key
     end
   end
-  new_arr[0]
+  small_name
 end
