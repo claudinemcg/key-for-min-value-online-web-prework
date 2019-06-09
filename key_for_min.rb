@@ -6,7 +6,8 @@ def key_for_min_value(name_hash)
   name_hash.collect do |key, value|
     if value < small
       small = value
+      new_arr << small
     end
   end
-  small[0]
+  new_arr[0]
 end
